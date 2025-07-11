@@ -1,0 +1,25 @@
+<h3>Lista de Empleados</h3>
+<table border="1" cellspacing="0" cellpadding="5">
+  <thead>
+    <tr>
+      <th>Num</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Teléfono</th>
+      <th>Fecha Nacimiento</th>
+      <th>Sexo</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empleados; let i = index">
+      <td>{{ emp.numEmpleado }}</td>
+      <td>{{ emp.nombre }}</td>
+      <td>{{ emp.correo }}</td>
+      <td>{{ emp.telefono }}</td>
+      <td>{{ emp.fechaNacimiento }}</td>
+      <td>{{ emp.sexo }}</td>
+      <td><button (click)="eliminarEmpleado(i)">Eliminar</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,24 @@
+<h3>Registro</h3>
+<form (ngSubmit)="agregarEmpleado()">
+  <label>Num. Empleado:</label>
+  <input type="number" [(ngModel)]="nuevoEmpleado.numEmpleado" name="numEmpleado" required />
+
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="nuevoEmpleado.nombre" name="nombre" required />
+
+  <label>Correo:</label>
+  <input type="email" [(ngModel)]="nuevoEmpleado.correo" name="correo" required />
+
+  <label>Teléfono:</label>
+  <input type="text" [(ngModel)]="nuevoEmpleado.telefono" name="telefono" required />
+
+  <label>Fecha de Nacimiento:</label>
+  <input type="date" [(ngModel)]="nuevoEmpleado.fechaNacimiento" name="fechaNacimiento" required />
+
+  <label>Sexo:</label>
+  <input type="radio" [(ngModel)]="nuevoEmpleado.sexo" name="sexo" value="Masculino" /> Masculino
+  <input type="radio" [(ngModel)]="nuevoEmpleado.sexo" name="sexo" value="Femenino" /> Femenino
+
+  <br /><br />
+  <button type="submit">Agregar</button>
+</form>
